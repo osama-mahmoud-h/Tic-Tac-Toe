@@ -51,7 +51,7 @@ document.addEventListener("click",(e)=>{
            if(checkWinner(XOarr)=='x'||isFullArr(XOarr)){
             board.classList.add('game-over');//add game over class to board
             document.querySelector('.info .game-over').classList.add('show');//show game over words
-            if(checkWinner(XOarr=='x'))
+            if(checkWinner(XOarr)=='o')
             winner.firstElementChild.textContent='X win';//write that X win
             gameOver=true;//set game over to true
            }
@@ -69,7 +69,7 @@ document.addEventListener("click",(e)=>{
                  gameOver=true;//set game over to true
                  board.classList.add('game-over');//add game over class to board
                  document.querySelector('.info .game-over').classList.add('show');//show game over words
-                 if(checkWinner(XOarr=='o'))
+                 if(checkWinner(XOarr)=='o')
                  winner.firstElementChild.textContent='O win';//write that o win
             }
            },200);
